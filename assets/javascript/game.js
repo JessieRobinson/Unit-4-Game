@@ -42,22 +42,46 @@ $("#targetScore").html(targetScore);
 
 }
 
+var addValues = function(flower) {
+    currentScore = currentScore + flower.value;
+    $("#yourScore").html = ("currentScore");
+    checkWin();
+    console.log("Your Score + currentScore");
+}
+
+var checkWin = function() {
+if(currentScore > targetScore) {
+    alert("You lost!");
+    console.log("You lost!")
+    loss count++;
+    $("#lossCount").html(lossCount);
+
+}
+
+else if (currentScore == targetScore) {
+    alert("You Won!");
+    console.log("You Wone!")
+    win count++;
+    $("#winCount").html(winCount);
+}
+}
+
 $("#flower1").click(function()
 {
-    alert("test");
+    addValues("flower.flower1");
 });
 
 $("#flower2").click(function()
 {
-    alert("test");
+    addValues("flower.flower2");
 });
 
 $("#flower3").click(function()
 {
-    alert("test");
+    addValues("flower.flower3");
 });
 
 $("#flower4").click(function()
 {
-    alert("test");
+    addValues("flower.flower4");
 }); 
